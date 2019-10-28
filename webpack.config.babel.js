@@ -99,7 +99,7 @@ webpackとは何か・何ができるか
   webpackはNode.jsで動くモジュールバンドラーで複数に渡るJavascriptファイルをい凸にまとめてくれるもの。また、新しいJavascriptで書かれた物をブラウザに対応したJavascriptの書き方にトランスパイルをしてくれたり、SassをCssにコンパイルしたり、ローカルサーバーを立ち上げられる。
   webpackではバンドルが一番の仕事であり、そのほかは別途設定が必要である。また、差分ビルドを行うため高速でバンドルが可能である。
 設定ファイルの.babelという拡張子は何か
-  ・ES２０１５以降の書き方でコードを書いたとき対象にするブラウザで認識できるコードにトランスパイルしてくれるもの。また。.babelではないものとの違いは新しいか古いかである。
+  ・webpackは設定ファイルをwebpack.config.jsで書くが、babel-registerによりES6でも書けるようにしたものが.babel.jsである。また、entryで指定したファイルをoutputで指定したファイルに吐き出すように設定できる。
 npm run watchは何を実行しているのか
   ・package.jsonの中のscriptで定義されているcross-env NODE_ENV=development webpack-dev-server --colorを実行している。cross-envはnpm scriptを実行時に任意の環境変数を設定できるようにし、NODE_ENV変数はdevelopmentのため、開発環境での実行を意味する。また、--colorはターミナルでログを色付き出してくれるものである。
 npm run buildは何を実行しているか
